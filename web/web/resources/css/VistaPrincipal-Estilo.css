@@ -1,0 +1,503 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02-feb-2019, 14:14:12
+    Author     : seasun
+*/
+
+body{
+    background-color: white;
+	font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
+}
+
+.contenedor{
+    background-color: #f4f4f4;
+    height: 600px;
+    max-height: 1550px;
+    min-height: 1200px;
+    width: 654px;
+    position: absolute;
+    left: 25%;
+    margin:auto;
+    
+}
+.dispositivosActivos{
+    background-color: #d7d7d7;
+    width: 128.099px;
+    height: 41.863px;
+    position: absolute;
+    top: 4%;
+    left: 75%;
+}
+.activos{
+    background-color: #d7d7d7;
+    transition:all.5s ease;
+    cursor: pointer;
+}
+.activos:hover{
+    background-color: #adadad;
+}
+.actualizarButton{
+    width: 41.863px;
+    height: 45px;
+    position: absolute;
+    top: 4%;
+    left: 69%;
+}
+.actualizar{
+    background-color: #009944;
+    width: 41.863px;
+    height: 45px;
+    transition:all.5s ease;
+    cursor: pointer;
+    left: .5%;
+}
+.imgActualizar{
+    background-image: url(../img/Actualizar.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30.863px;
+    height: 41px;
+}
+.actualizar:active{
+    background-image: url(../img/Actualizando.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.contenedorHuertos{
+    background-color: #d7d7d7;
+    height: 93%;
+    width: 630px;
+    position: absolute;
+    top: 130px;
+    right: 10px;
+}
+.cont{
+    background-color: #d7d7d7;
+    height: 280;
+    width: 630px;
+    position: absolute;
+    bottom:74%;
+    right: 10px;
+}
+.menuNodo{
+    background-color: red;
+    height: 257.847px;
+    width: 92.555px;
+    position: absolute;
+    right: .2%;
+}
+.menuNodoD{
+    background-color: green;
+    height: 257.847px;
+    width: 92.555px;
+    position: absolute;
+    right: .2%;
+}
+.nodoHuerto{
+    background-color: red;
+    height: 257.847px;
+    width: 92.555px;
+    transition:all.5s ease;
+    cursor: pointer;
+}
+.nodoHuertoD{
+    background-color: green;
+    height: 257.847px;
+    width: 92.555px;
+    transition:all.5s ease;
+    cursor: pointer;
+}
+.nodoHuerto:hover{
+    background: #d10000;
+}
+.nodoHuertoD:hover{
+    background: #004700;
+}
+.imagen{
+    background-image: url(../img/Engrane.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 200.847px;
+    width: 50.555px;
+    top: 5%;
+    right: 23%;
+}
+.ubicacion{
+    background-color: #4a494a;
+    height: 257.847px;
+    width: 358.038px;
+    position: absolute;
+    right: 14.5%;
+}
+.humedad{
+    background-color: #66bda2;
+    height: 85.015px;
+    width: 89.644px;
+    position: absolute;
+    bottom: 77.1%;
+    right: 71.3%;
+    color: white;
+    text-align: center;
+    font-size: 55pt;
+    cursor: pointer;
+    transition:all.5s ease;
+}
+.humedad:hover{
+    background-color: #519680;
+}
+.temperatura{
+    background-color: #81c285;
+    height: 85.015px;
+    width: 90.644px;
+    position: absolute;
+    bottom: 77.1%;
+    color: white;
+    text-align: center;
+    font-size: 55pt;
+    cursor: pointer;
+    transition:all.5s ease;
+}
+.temperatura:hover{
+    background-color: #70aa74;
+}
+.humedadD{
+    background-color: #66bda2;
+    height: 85.015px;
+    width: 89.644px;
+    position: relative;
+    left: 91px;
+    color: white;
+    text-align: center;
+    font-size: 55pt;
+    top: 8px;
+    cursor: pointer;
+    transition:all.5s ease;
+}
+.humedadD:hover{
+    background-color: #519680;
+}
+.temperaturaD{
+    background-color: #81c285;
+    height: 85.015px;
+    width: 90.644px;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 55pt;
+    top: 8px;
+    right: 93px;
+    cursor: pointer;
+    transition:all.5s ease;
+}
+.temperaturaD:hover{
+    background-color: #70aa74;
+}
+.nodoDesplegable{
+    position: absolute;
+    top: 21.5%;
+    width: 630px;
+}
+.nodoDesplegableD{
+    position: relative;
+    bottom: 10px;  
+    width: 630px;
+}
+
+
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	color: #b63b4d;
+	text-decoration: none;
+}
+
+/** =======================
+ * Contenedor Principal
+ ===========================*/
+h1 {
+ 	color: #FFF;
+ 	font-size: 24px;
+ 	font-weight: 400;
+ 	text-align: center;
+ }
+
+h1 a {
+ 	color: #c12c42;
+ 	font-size: 16px;
+ }
+
+ .accordion {
+ 	background: #c7c6c6;
+ 	-webkit-border-radius: 4px;
+ 	-moz-border-radius: 4px;
+ 	border-radius: 4px;
+ }
+
+.accordion .link {
+	cursor: pointer;
+	display: block;
+	padding: 15px 15px 15px 42px;
+	color: #4D4D4D;
+	font-size: 20px;
+	font-weight: 700;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordion li i {
+	position: absolute;
+	top: 16px;
+	left: 12px;
+	font-size: 18px;
+	color: #595959;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+	right: 12px;
+	left: auto;
+	font-size: 16px;
+}
+
+.accordion li.open .link {
+	color: #000000;
+}
+
+.accordion li.open i {
+	color: #000000;
+}
+.accordion li.open i.fa-chevron-down {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.accordion li.default .submenu {display: block;}
+/**
+ * Submenu
+ -----------------------------*/
+ .submenu {
+ 	display: none;
+ 	background: #444359;
+ 	font-size: 14px;
+ }
+
+ .submenu a {
+ 	display: block;
+ 	text-decoration: none;
+ 	color: #d9d9d9;
+ 	-webkit-transition: all 0.25s ease;
+ 	-o-transition: all 0.25s ease;
+ 	transition: all 0.25s ease;
+ }
+
+ .submenu a:hover {
+ 	background: #b63b4d;
+ 	color: #FFF;
+ }
+
+.accordionD {
+ 	background: #c7c6c6;
+ 	-webkit-border-radius: 4px;
+ 	-moz-border-radius: 4px;
+ 	border-radius: 4px;
+ }
+
+.accordionD .linkD {
+	cursor: pointer;
+	display: block;
+	padding: 15px 15px 15px 42px;
+	color: #4D4D4D;
+	font-size: 20px;
+	font-weight: 700;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordionD li i {
+	position: absolute;
+	top: 16px;
+	left: 12px;
+	font-size: 18px;
+	color: #595959;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordionD li i.fa-chevron-down {
+	right: 12px;
+	left: auto;
+	font-size: 16px;
+}
+
+.accordionD li.open .linkD {
+	color: #000000;
+}
+
+.accordionD li.open i {
+	color: #000000;
+}
+.accordionD li.open i.fa-chevron-down {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.accordionD li.default .submenuD {display: block;}
+/**
+ * Submenu
+ -----------------------------*/
+ .submenuD {
+ 	display: none;
+ 	background: #444359;
+ 	font-size: 14px;
+ }
+
+ .submenuD a {
+ 	display: block;
+ 	text-decoration: none;
+ 	color: #d9d9d9;
+ 	-webkit-transition: all 0.25s ease;
+ 	-o-transition: all 0.25s ease;
+ 	transition: all 0.25s ease;
+ }
+
+ .submenuD a:hover {
+ 	background: #b63b4d;
+ 	color: #FFF;
+ }
+
+.barraIntensidad{
+    background-color: #262c5f;
+    height: 265.847px;
+    width: 92.555px;
+    right: 1%;
+    float: right;
+}
+.plaga{
+    background-color: #d7d7d7;
+    height: 257.847px;
+    width: 220.288px;
+    left: 1%;
+    float: left;
+    text-align: center;
+    font-size: 20pt;
+    padding: 1%;
+}
+.imagenD{
+    background-image: url(../img/soldado.jpg);
+    background-repeat: no-repeat;
+    background-position:right;
+    height: 268.847px;
+    width: 500.038px;
+    right: 14.5%;
+    float:inherit;
+}
+.barraIntensidadD{
+    background-color: darkred;
+    height: 265.847px;
+    width: 92.555px;
+    right: 1%;
+    float: right;
+}
+.plagaD{
+    background-color: #d7d7d7;
+    height: 257.847px;
+    width: 220.288px;
+    left: 1%;
+    float: left;
+    text-align: center;
+    font-size: 20pt;
+    padding: 1%;
+}
+.imagenDD{
+    background-image: url(../img/Ara%C2%A7a-Blanca.jpg);
+    background-repeat: no-repeat;
+    background-position:right;
+    height: 268.847px;
+    width: 500.038px;
+    right: 14.5%;
+    float:inherit;
+}
+
+.hora{
+    left: 32%;
+    font-size: 15pt;
+    top: 4%;
+    position: absolute;
+    font-weight: bold;
+}
+
+.widget p{
+    display: inline-block;
+    line-height: 1em;
+    font-size: 7pt;
+}
+
+.reloj .caja-segundos{
+    display: inline-block;
+    font-size: 7pt;
+}
+
+.reloj .segundos, .reloj .ampm{
+    font-size: 2rem;
+    font-size: 7pt;
+}
+
+.contenedorLogo{
+    background-image: url(../img/SOTECAMP_1.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 3%;
+    right: 87%;
+    height: 65px;
+    width: 65px;
+}
+
+#titulo{
+    font-size: 25pt;
+    color: #4D4D4D;
+    background-color: #d7d7d7;
+    cursor: pointer;
+}
+#clima{
+    color: #4d4d4d;
+    text-align: center;
+}
+#contClima{
+    width: 180px;
+}
+#plagaProb{
+    text-align: right;
+    padding: inherit;
+    font-size: 15pt;
+    color: #4d4d4d;
+}
+#porcentaje{
+    font-size: 50pt;
+}
+.ubicacionD{
+    background-color: #4a494a;
+    height: 257.847px;
+    width: 358.038px;
+    right: 14.5%;
+    top: 27%;
+}
